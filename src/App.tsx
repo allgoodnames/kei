@@ -140,7 +140,7 @@ function App() {
       <ul>
         {filteredList.map(person => (
           <li className="card" key={person.id}>
-            <img src={`/img/${person.id}.jpg`} alt={person.name} />
+            <img src={`${import.meta.env.BASE_URL}img/${person.id}.png`} alt="profile" />
             <div className='info'>
               {person.name}<br />
               Gender: {`${person.gender.charAt(0).toUpperCase()}${person.gender.slice(1)}`}<br />
