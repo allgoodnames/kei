@@ -84,7 +84,7 @@ function App() {
   const filteredList = talent.filter((person) => {
     return (
       person.name.toLowerCase().includes(searchName.toLowerCase()) &&
-      (searchGender === "" || person.gender.toLowerCase().includes(searchGender.toLowerCase())) &&
+      (searchGender === "" || person.gender === searchGender) &&
       (person.height >= minHeight && person.height <= maxHeight) &&
       (searchHairColor === "" || person.hair_color.toLowerCase().includes(searchHairColor.toLowerCase()))
     );
@@ -140,7 +140,7 @@ function App() {
       <ul>
         {filteredList.map(person => (
           <li className="card" key={person.id}>
-            <img src={`${import.meta.env.BASE_URL}img/${person.id}.png`} alt="profile" />
+            <img src={`/kei/img/${person.id}.jpg`} alt={person.name} />
             <div className='info'>
               {person.name}<br />
               Gender: {`${person.gender.charAt(0).toUpperCase()}${person.gender.slice(1)}`}<br />
