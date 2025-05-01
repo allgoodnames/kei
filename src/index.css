@@ -97,7 +97,6 @@ ul {
 .card {
   display: flex;
   gap: 30px;
-  width: 400px;
   box-shadow: 6px 7px 21px -9px rgba(0,0,0,0.39);
 }
 

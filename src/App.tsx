@@ -141,12 +141,6 @@ function App() {
         {filteredList.map(person => (
           <li className="card" key={person.id}>
             <img src={`/kei/img/${person.id}.jpg`} alt={person.name} />
-            <div className='info'>
-              {person.name}<br />
-              Gender: {`${person.gender.charAt(0).toUpperCase()}${person.gender.slice(1)}`}<br />
-              Height: {person.height}<br />
-              Hair color: {`${person.hair_color.charAt(0).toUpperCase()}${person.hair_color.slice(1)}`}
-            </div>
           </li>
         ))}
       </ul>
